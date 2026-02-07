@@ -31,15 +31,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="footer-links">
                             <h3 class="white">Quick links</h3>
-                            <ul>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>">Home</a></li>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>/about-us.html">About Us</a></li>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>/tours.html">Tours</a></li>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>/gallery.html">Gallery</a></li>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>/contact-us.html">Contact Us</a></li>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>/privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="<?php echo DPA_THEME_URI; ?>/terms-and-conditions.html">Terms and Conditions</a></li>
-                            </ul>
+                            <?php wp_nav_menu( array('theme_location' => 'quick-links', 'menu_class' => '')); ?>  
                         </div>
                     </div> 
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">

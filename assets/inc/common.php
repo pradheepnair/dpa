@@ -211,5 +211,17 @@
         return $in;
     }
     add_filter('tiny_mce_before_init','configure_dpamce');
+
+	function my_mce4_options($init) {
+		$custom_colours = '
+			"000000", "Black",
+			"FF0000", "Red",
+			"00FF00", "Green"
+		';
+		$init['textcolor_map'] = '['.$custom_colours.']';
+		$init['textcolor_rows'] = 1; // Number of rows in palette
+		return $init;
+	}
+	add_filter('tiny_mce_before_init', 'my_mce4_options');
  
 ?>

@@ -31,7 +31,7 @@
 	<meta property="og:image" content="<?php echo DPA_THEME_URI; ?>/assets/images/2023/tours/popular/desert-safari.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
 
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo DPA_THEME_URI; ?>/assets/images/favicon.png"> 
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_site_icon_url(); ?>"> 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -50,7 +50,7 @@
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                             <a class="navbar-brand" href="<?php echo DPA_THEME_URI; ?>">
-                                <img src="<?php echo DPA_THEME_URI; ?>/assets/images/logo.svg" alt="Dubai Private Adventure" class="logo-image">
+                                <img src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="Dubai Private Adventure" class="logo-image">
                             </a>
                         </div>
 					</div>

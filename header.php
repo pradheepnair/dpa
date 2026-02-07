@@ -53,6 +53,16 @@
                                 <img src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="Dubai Private Adventure" class="logo-image">
                             </a>
                         </div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
+							<?php wp_nav_menu( array('theme_location' => 'main-nav', 'menu_class' => 'nav navbar-nav')); ?> 
+                        </div><!-- /.navbar-collapse -->    
+                        <div class="register-login d-flex align-items-center"> 
+                            <a href="#"  class="nir-btn white btn_action">Book Now</a>
+                        </div> 
+
+                        <div id="slicknav-mobile"></div>
 					</div>
 				</div>
 			</nav>

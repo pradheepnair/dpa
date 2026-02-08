@@ -100,18 +100,18 @@
 			true,
 			'1.0.0'
 		); 
-        wp_enqueue_script(
-			'dpa_script_particles',
-			DPA_THEME_URI . '/assets/js/particles.js',
-			true,
-			''
-		);  
-        wp_enqueue_script(
-			'dpa_script_particlerun',
-			DPA_THEME_URI . '/assets/js/particlerun.js',
-			true,
-			'1.0.0'
-		); 
+        // wp_enqueue_script(
+		// 	'dpa_script_particles',
+		// 	DPA_THEME_URI . '/assets/js/particles.js',
+		// 	true,
+		// 	''
+		// );  
+        // wp_enqueue_script(
+		// 	'dpa_script_particlerun',
+		// 	DPA_THEME_URI . '/assets/js/particlerun.js',
+		// 	true,
+		// 	'1.0.0'
+		// ); 
         wp_enqueue_script(
 			'dpa_script_plugin',
 			DPA_THEME_URI . '/assets/js/plugin.js',

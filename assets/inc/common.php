@@ -163,7 +163,7 @@
         wp_enqueue_script(
 			'dpa_script_custom_script',
 			DPA_THEME_URI . '/assets/js/script.js',
-			true,
+			 true,
 			'1.0.0'
 		);          
 		wp_localize_script(

@@ -99,6 +99,24 @@
             'type'      => 'text'
         ));
 
+        $wp_customize->add_setting('dpa_general_tripadvisor_google', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+            'capability'     => 'edit_theme_options' 
+        ));
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'dpa_general_tripadvisor_google',
+                array(
+                    'label'      => 'TripAdvisor/Google Review Logo',
+                    'section'    => 'dpa_general_block',
+                    'settings'   => 'dpa_general_tripadvisor_google'
+                )
+            )
+        );
+
     	 
     }
     add_action('customize_register', 'customize_general_block'); 
@@ -189,7 +207,7 @@
     		'panel'    => 'footer_blocks',
             'priority' => 70,
         ));
-        
+
     	$wp_customize->add_setting('dpa_social_fb', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',

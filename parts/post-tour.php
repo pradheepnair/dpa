@@ -199,6 +199,22 @@ $duration = get_field('duration', $post->ID);
                         ?> 
                     </div>
                 </div>
+                <div class="col-lg-4 ps-lg-4">
+                    <div class="sidebar-sticky">
+                        <div class="list-sidebar">
+                            <div class="sidebar-item">
+                                <form class="form-content rounded overflow-hidden bg-theme">
+                                    <h4 class="white text-center border-b pb-2">So, what are you waiting for? Book your package now!</h4>
+                                    <a href="#" class="nir-btn w-100 bg-title btn_action">Book Now</a> 
+                                </form>
+                                <div class="logo-appreciations" style="justify-content: center;">
+                                    <a href="https://www.tripadvisor.com/Attraction_Review-g295424-d6902277-Reviews-Dubai_Private_Adventure-Dubai_Emirate_of_Dubai.html" target="_blank"><img src="<?php echo DPA_THEME_URI; ?>//assets/images/2023/trip-advisor.webp" alt=""></a> 
+                                    <a href="https://www.google.com/search?q=dubai+private+adventure&amp;rlz=1C1CHWL_enIN1019IN1019&amp;oq=dubai+private+adventure&amp;aqs=chrome.0.0i355i512j46i175i199i512j0i512j0i390i650l2j69i60l3.11239j0j7&amp;sourceid=chrome&amp;ie=UTF-8#lrd=0x3e5f4280caa5f721:0x6e658adc92c83b9b,1,,," target="_blank"><img src="<?php echo DPA_THEME_URI; ?>/assets/images/2023/google-reviews.svg" alt=""></a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

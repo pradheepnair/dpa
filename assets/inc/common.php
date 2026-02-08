@@ -221,4 +221,26 @@
 	}
 	add_filter('tiny_mce_before_init', 'my_mce4_options');
  
+	add_filter('manage_testimonial_posts_columns', function($columns) {
+		$new_columns = [];
+
+		foreach ($columns as $key => $value) {
+			$new_columns[$key] = $value;
+
+			// Insert after title column
+			if ($key === 'title') {
+				$new_columns['location'] = 'Location';
+			}
+		}
+
+		return $new_columns;
+	});
+
+	add_action('manage_testimonial_posts_custom_column', function($column, $post_id) {
+		if ($column === 'location') {
+			$location = get_post_meta($post_id, 'location', true);
+			echo $location ? esc_html($location) : '—';
+		}
+	}, 10, 2);
+ 
 ?>

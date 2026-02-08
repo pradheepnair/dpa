@@ -177,6 +177,7 @@
             'label'      => __('Footer Bio Text', 'dpa'),
             'section'    => 'dpa_footer_bio',
             'settings'   => 'dpa_footer_bio_text',
+            'type'      => 'textarea'
         ));
     	
     	function sanitize_text( $text ) {

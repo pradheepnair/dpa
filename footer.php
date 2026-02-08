@@ -9,6 +9,7 @@
  * @since       1.0
  */
 
+ $footer_script = get_option('dpa_script_footer');
 ?>
 <!-- footer starts -->
     <footer class="pt-20 pb-4"  style="background-image: url(<?php echo DPA_THEME_URI; ?>/assets/images/bg/bg-footer.png);background-size:cover;">
@@ -18,13 +19,14 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4 pe-4">
                         <div class="footer-about">
-                            <img src="<?php echo DPA_THEME_URI; ?>/assets/images/logo-white.svg" alt="" width="140">
+                            <img src="<?php echo esc_url(get_theme_mod('site_logo_alt')); ?>" alt="<?php echo get_option('blogname'); ?>" width="140" />
+
                             <p class="mt-3 mb-3 white">
-                                Welcome to Dubai Private Adventure, your one-stop shop for all your Desert Safari and Sightseeing needs. Our team of experienced and authorized guides, drivers, and support staffs are dedicated to making sure that every customer has a memorable experience.
+                                <?php echo get_option('dpa_footer_bio_text'); ?>
                             </p>
                             <ul>
-                                <li class="white"><strong>Call:</strong> +971 581113485</li> 
-                                <li class="white"><strong>Email:</strong> info@dubaiprivateadventure.com</li> 
+                                <li class="white"><strong>Call:</strong> <a href="tel:<?php echo get_option('dpa_general_mobile'); ?>"><?php echo get_option('dpa_general_mobile'); ?></a></li> 
+                                <li class="white"><strong>Email:</strong> <a href="mailto:<?php echo get_option('dpa_general_email'); ?>"><?php echo get_option('dpa_general_email'); ?></a></li> 
                             </ul>
                         </div>
                     </div>
@@ -66,20 +68,37 @@
                 </div>    
             </div>
         </div>
-
+        <?php 
+            $social_handle_fb = get_option('dpa_social_fb');
+            $social_handle_ig = get_option('dpa_social_ig');
+            $social_handle_tw = get_option('dpa_social_tw');
+            $social_handle_yt = get_option('dpa_social_yt');
+            $social_handle_li = get_option('dpa_social_li'); 
+            $copyright_text = get_option('dpa_copyright_text');
+        ?>
         <div class="footer-copyright">
             <div class="container">
                 <div class="copyright-inner rounded p-3 d-md-flex align-items-center justify-content-between">
                     <div class="copyright-text">
-                        <p class="m-0 white">© 2023 - D P A TRAVEL & TOURISM L.L.C. Dubai. (License No: DXB 829951) All Rights Reserved.</p>
+                        <p class="m-0 white"><?php echo $copyright_text; ?></p>
                     </div>
                     <div class="social-links">
-                        <ul>  
-                            <li><a href="https://www.facebook.com/dubaiprivateadventure/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="https://twitter.com/dubaiprivate/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.instagram.com/dubaiprivateadventure/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/dubai-private-adventure" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.youtube.com/@dubaiprivateadventure" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        <ul>
+                            <?php if (trim($social_handle_fb)) { ?>
+                                <li><a href="<?php echo esc_url($social_handle_fb); ?>" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <?php } ?>
+                            <?php if (trim($social_handle_tw)) { ?>
+                                <li><a href="<?php echo esc_url($social_handle_tw); ?>" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <?php } ?>
+                            <?php if (trim($social_handle_ig)) { ?>
+                                <li><a href="<?php echo esc_url($social_handle_ig); ?>" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <?php } ?>
+                            <?php if (trim($social_handle_li)) { ?>
+                                <li><a href="<?php echo esc_url($social_handle_li); ?>" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <?php } ?>
+                            <?php if (trim($social_handle_yt)) { ?>
+                                <li><a href="<?php echo esc_url($social_handle_yt); ?>" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>    
@@ -99,5 +118,6 @@
         <div id="popupWin" class="dpa_popup">Here</div> 
     </div>
 <?php wp_footer(); ?>
+<?php echo $footer_script; ?>
 </body>
 </html>

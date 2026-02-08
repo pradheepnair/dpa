@@ -10,8 +10,8 @@
  * Domain Path: /languages/
  */
  global $wp; 
- $header_script = get_option('dipmf_script_ga');
- $body_script = get_option('dipmf_script_body');
+ $header_script = get_option('dpa_script_header');
+ $body_script = get_option('dpa_script_body');
 ?>
 <!doctype html>
 <html xml:lang="en" lang="en" dir="ltr" itemscope itemtype="http://schema.org/WebPage">

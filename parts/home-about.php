@@ -25,7 +25,7 @@ $page_image_url = get_the_post_thumbnail_url($page->ID, 'full');
                         </div>
                     </div>
                     <div class="col-lg-3 mb-4 pe-lg-4 mt-3">
-                        <?php echo get_theme_mod('dpa_general_tripadvisor'); ?>
+                        <?php echo get_option('dpa_general_tripadvisor'); ?>
                     </div>
                 </div>
             </div>

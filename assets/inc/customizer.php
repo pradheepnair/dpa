@@ -23,6 +23,23 @@
         );
     }
     add_action('customize_register', 'site_logo'); 
+
+        // Logo alternate section
+    function site_logo_alt( $wp_customize ) { 
+        $wp_customize->add_setting( 'site_logo_alt' );
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'site_logo_alt',
+                array(
+                    'label'      => 'Logo (White)',
+                    'section'    => 'title_tagline',
+                    'settings'   => 'site_logo_alt'
+                )
+            )
+        );
+    }
+    add_action('customize_register', 'site_logo_alt');  
     
     // Navigation 
     function register_dpa_menus() {
@@ -42,6 +59,7 @@
             'description' => 'Set general settings here', 
             'priority' => 600,
         ));
+
     	$wp_customize->add_setting('dpa_general_tripadvisor', array(
             'default'        => '', 
             'transport'      => 'refresh',
@@ -53,6 +71,32 @@
             'section'    => 'dpa_general_block',
             'settings'   => 'dpa_general_tripadvisor',
             'type'      => 'textarea'
+        ));
+
+    	$wp_customize->add_setting('dpa_general_email', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+			'capability'     => 'edit_theme_options' 
+        ));
+    	$wp_customize->add_control('dpa_general_email_input', array(
+            'label'      => __('Email Address:', 'dpa'),
+            'section'    => 'dpa_general_block',
+            'settings'   => 'dpa_general_email',
+            'type'      => 'text'
+        ));
+
+    	$wp_customize->add_setting('dpa_general_mobile', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+			'capability'     => 'edit_theme_options' 
+        ));
+    	$wp_customize->add_control('dpa_general_mobile_input', array(
+            'label'      => __('Mobile Number:', 'dpa'),
+            'section'    => 'dpa_general_block',
+            'settings'   => 'dpa_general_mobile',
+            'type'      => 'text'
         ));
 
     	 
@@ -148,7 +192,7 @@
     	$wp_customize->add_setting('dpa_social_fb', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
-            'type'           => 'theme_mod' 
+            'type'           => 'option' 
         ));
     	$wp_customize->add_control('dpa_fb', array(
             'label'      => __('Facebook handle', 'dpa'),

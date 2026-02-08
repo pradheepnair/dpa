@@ -88,7 +88,11 @@ $duration = get_field('duration', $post->ID);
                                     <div><img src="<?php echo $image['image']; ?>" alt=""></div>
                                     <?php } ?>
                                 </div>
-                                
+                                <div class="slider-thumbs" style="display:none">
+                                    <?php foreach ($images as $image) {  ?>
+                                    <div><img src="<?php echo $image['image']; ?>" alt=""></div>
+                                    <?php } ?>  
+                                </div>
                             </div>
                         </div>   
                         <?php

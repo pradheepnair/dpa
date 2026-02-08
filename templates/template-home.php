@@ -10,5 +10,6 @@
 get_header(); 
 get_template_part('parts/home-banner', 'home'); 
 get_template_part('parts/home-about', 'home'); 
+get_template_part('parts/home-counter', 'home');
 get_footer();
 ?>

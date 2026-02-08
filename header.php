@@ -56,7 +56,7 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
-							<?php wp_nav_menu( array('theme_location' => 'main-nav', 'menu_class' => 'nav navbar-nav')); ?> 
+							<?php wp_nav_menu( array('theme_location' => 'main-nav', 'menu_class' => 'nav navbar-nav', 'container' => false)); ?> 
                         </div><!-- /.navbar-collapse -->    
                         <div class="register-login d-flex align-items-center"> 
                             <a href="#"  class="nir-btn white btn_action">Book Now</a>

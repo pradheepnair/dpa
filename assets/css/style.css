@@ -8834,3 +8834,6 @@ input::placeholder,
   width: 365px;
   max-width: 100%;
 }
+.current_page_item a {
+  color: #ef9a45 !important;
+}

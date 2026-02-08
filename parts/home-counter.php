@@ -6,7 +6,10 @@
  * @author      Pradheep Nair <pradheep.pnair@gmail.com>
  * @since       1.0.0
  */
-$homepage_id = get_option('page_on_front');
+global $wp_query; 
+$post = $wp_query->post; 
+$page = get_page_by_path('home', OBJECT, 'page'); 
+$homepage_id = $page->ID; //get_option('page_on_front');
 $years_of_experience = 15;  
 $tour_packages = 530;  
 $happy_customers = 850;  
@@ -28,7 +31,7 @@ if ( $homepage_id ) {
                         <div class="counter-item border-end pe-4 d-flex align-items-center">
                             <i class="icon-clock bg-theme p-3 rounded me-3 white fs-4"></i>
                             <div class="counter-content">
-                                <h2 class="value mb-0"><?php echo esc_html($years_of_experience); ?></h2>
+                                <h2 class="value mb-0"><?php echo $years_of_experience; ?></h2>
                                 <span class="m-0">Years Experiences</span>
                             </div>
                         </div>    
@@ -38,7 +41,7 @@ if ( $homepage_id ) {
                         <div class="counter-item border-end pe-4 d-flex align-items-center">
                             <i class="icon-magnifier bg-theme p-3 rounded me-3 white fs-4"></i>
                             <div class="counter-content">
-                                <h2 class="value mb-0"><?php echo esc_html($tour_packages); ?></h2>
+                                <h2 class="value mb-0"><?php echo $tour_packages; ?></h2>
                                 <span class="m-0">Tour Packages</span>
                             </div>
                         </div>    
@@ -48,7 +51,7 @@ if ( $homepage_id ) {
                         <div class="counter-item border-end pe-4 d-flex align-items-center">
                             <i class="icon-user-following bg-theme p-3 rounded me-3 white fs-4"></i>
                             <div class="counter-content">
-                                <h2 class="value mb-0"><?php echo esc_html($happy_customers); ?></h2>
+                                <h2 class="value mb-0"><?php echo $happy_customers; ?></h2>
                                 <span class="m-0">Happy Customers</span>
                             </div>
                         </div>    
@@ -58,7 +61,7 @@ if ( $homepage_id ) {
                         <div class="counter-item d-flex align-items-center">
                             <i class="icon-trophy bg-theme p-3 rounded me-3 white fs-4"></i>
                             <div class="counter-content">
-                                <h2 class="value mb-0"><?php echo esc_html($award_winning); ?></h2>
+                                <h2 class="value mb-0"><?php echo $award_winning; ?></h2>
                                 <span class="m-0">Award Winning</span>
                             </div>
                         </div>    

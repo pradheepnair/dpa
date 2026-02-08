@@ -57,6 +57,8 @@ $duration = get_field('duration', $post->ID);
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Summary -->
                         <?php
                         $summary = get_field('summary', $post->ID);
                         if($summary) { ?>
@@ -71,6 +73,31 @@ $duration = get_field('duration', $post->ID);
                             <?php } ?>
                         </div>
                         <?php } ?>
+
+                        <!-- Gallery -->
+                        <?php
+                        $images = get_field('images', $post->ID);
+                        if($images) { 
+                            $count_images = count($images);
+                            if ($count_images > 0) {
+                        ?>
+                        <div class="description-images mb-4 overflow-hidden">
+                            <div class="thumbnail-images position-relative">
+                                <div class="slider-store rounded overflow-hidden">
+                                    <?php foreach($images as $image) { ?>
+                                    <div><img src="<?php echo $image['image']; ?>" alt=""></div>
+                                    <?php } ?>
+                                </div>
+                                <div class="slider-thumbs" style="display:none">
+                                    <?php foreach ($images as image) {  ?>
+                                    <div><img src="<?php echo $image['image']; ?>" alt=""></div>
+                                    <?php } ?>  
+                                </div>
+                            </div>
+                        </div>   
+                        <?php
+                            } 
+                        } ?>
                     </div>
                 </div>
             </div>

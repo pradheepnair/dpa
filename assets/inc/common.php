@@ -122,49 +122,49 @@
 			'dpa_script_magnific',
 			DPA_THEME_URI . '/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		); 
         wp_enqueue_script(
 			'dpa_script_jquery_ui',
 			DPA_THEME_URI . '/assets/vendors/jquery-ui/jquery-ui.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		); 
         wp_enqueue_script(
 			'dpa_script_timepicker',
 			DPA_THEME_URI . '/assets/vendors/timepicker/timePicker.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		); 
         wp_enqueue_script(
 			'dpa_script_main',
 			DPA_THEME_URI . '/assets/js/main.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		); 
         wp_enqueue_script(
 			'dpa_script_custom_swiper',
 			DPA_THEME_URI . '/assets/js/custom-swiper.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		); 
         wp_enqueue_script(
 			'dpa_script_custom_accordian',
 			DPA_THEME_URI . '/assets/js/custom-accordian.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		); 
         wp_enqueue_script(
 			'dpa_script_custom_nav',
 			DPA_THEME_URI . '/assets/js/custom-nav.js',
 			true,
-			'1.0.0'
+			'1.0.1'
 		);  
         wp_enqueue_script(
 			'dpa_script_custom_script',
 			DPA_THEME_URI . '/assets/js/script.js',
 			 true,
-			'1.0.0'
+			'1.0.1'
 		);          
 		wp_localize_script(
 		    'dpa_script', 'dpa_ajax',

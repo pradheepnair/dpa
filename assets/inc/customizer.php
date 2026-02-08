@@ -161,6 +161,23 @@
             'section'    => 'dpa_social_handle',
             'settings'   => 'dpa_social_li',
         )); 
+
+        // Footer Bio block
+    	$wp_customize->add_section('dpa_footer_bio', array(
+            'title'    => __('Footer Bio block', 'dpa'),
+    		'panel'    => 'footer_blocks',
+            'priority' => 70,
+        ));
+    	$wp_customize->add_setting('dpa_footer_bio_text', array(
+            'default'        => '',
+            'capability'     => 'edit_theme_options',
+            'type'           => 'theme_mod' 
+        ));
+    	$wp_customize->add_control('dpa_footer_bio_text_control', array(
+            'label'      => __('Footer Bio Text', 'dpa'),
+            'section'    => 'dpa_footer_bio',
+            'settings'   => 'dpa_footer_bio_text',
+        ));
     	
     	function sanitize_text( $text ) {
     	    return sanitize_text_field( $text );

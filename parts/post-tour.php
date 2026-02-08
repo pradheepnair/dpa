@@ -203,6 +203,7 @@ $duration = get_field('duration', $post->ID);
                     <div class="sidebar-sticky">
                         <div class="list-sidebar">
                             <div class="sidebar-item">
+                                <p>&nbsp;</p>
                                 <form class="form-content rounded overflow-hidden bg-theme">
                                     <h4 class="white text-center border-b pb-2">So, what are you waiting for? Book your package now!</h4>
                                     <a href="#" class="nir-btn w-100 bg-title btn_action">Book Now</a> 

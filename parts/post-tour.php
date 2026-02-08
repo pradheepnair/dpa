@@ -143,7 +143,7 @@ $duration = get_field('duration', $post->ID);
                         ?> 
 
                         <!-- Add-ons -->
-                         <?php
+                        <?php
                         $addons_list = get_field('add-ons', $post->ID);
                         if($addons_list) {
                             $addons = get_posts(array('post_type' => 'add-on', 'post__in' => $addons_list, 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC'));
@@ -171,6 +171,32 @@ $duration = get_field('duration', $post->ID);
                              }
                         } 
                         ?>
+
+                        <!-- Additional Information -->
+                        <?php
+                        $additionals = get_field('additionals', $post->ID);
+                        if($additionals) {
+                            $count_additionals = count($additionals);
+                            if ($count_additionals > 0) {
+                                foreach ($additionals as $additional) { ?>
+                            <div class="row">
+                                <div class="col-md-12"> 
+                                    <p>&nbsp;</p>
+                                    <h3><?php echo $additional['title']; ?></h3> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12"> 
+                                    <div class="tour-addons-info">
+                                    <?php echo $additional['description']; ?>
+                                    </div>
+                                </div>
+                            </div> 
+                            <?php
+                                }
+                            }
+                        }
+                        ?> 
                     </div>
                 </div>
             </div>

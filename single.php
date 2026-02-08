@@ -13,7 +13,7 @@
 get_header();
 
 // Tour
-if (is_single() && get_post_type() == 'speaker') { 
+if (is_single() && get_post_type() == 'tour') { 
     get_template_part('parts/post-tour', 'post');
 } 
 

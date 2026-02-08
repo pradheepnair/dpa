@@ -170,7 +170,10 @@
 		    'dpa_script', 'dpa_ajax',
             array('ajax_url' => admin_url('admin-ajax.php'), 'template_url' => DPA_THEME_URI), true
         );  
-         
+        wp_localize_script(
+		    'dpa_script', 'web_url',
+            array('web_url' => DPA_THEME_URI), true
+        );   
     }
     add_action('wp_enqueue_scripts', 'dpa_register_scripts');  
      

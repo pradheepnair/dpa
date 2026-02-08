@@ -8,14 +8,15 @@
  */
 global $wp_query; 
 $post = $wp_query->post; 
+$homepage_id = get_option('page_on_front');
+echo $homepage_id;
 $page = get_page_by_path('home', OBJECT, 'page'); 
 $homepage_id = $page->ID; //get_option('page_on_front');
 $years_of_experience = 15;  
 $tour_packages = 530;  
 $happy_customers = 850;  
 $award_winning = 320;  
-if ( $homepage_id ) {
-    $page = get_post($homepage_id); 
+if ($homepage_id) { 
     $years_of_experience = get_option('experience', $homepage_id);
     $tour_packages = get_option('packages', $homepage_id);
     $happy_customers = get_option('customers', $homepage_id);

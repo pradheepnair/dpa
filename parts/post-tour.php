@@ -103,6 +103,44 @@ $duration = get_field('duration', $post->ID);
                         <div class="description mb-2">
                             <?php echo $post->post_content; ?>
                         </div> 
+
+                        <!-- Itinerary -->
+                        <?php
+                        $itinerary = get_field('itinerary', $post->ID);
+                        if($itinerary) { 
+                            $count_itinerary = count($itinerary);
+                            if ($count_itinerary > 0) {
+                                $description = get_field('introduction', $post->ID);
+                        ?>
+                        <div class="description mb-4 mt-5">
+                            <h3>Itinerary</h3>
+                            <p><?php echo $description; ?></p>               
+                        </div>
+                        <div class="accrodion-grp faq-accrodion mb-4" data-grp-name="faq-accrodion">
+                            <?php 
+                            $k = 0;
+                            foreach($itinerary as $item) {  
+                            ?>
+                            <div class="accrodion <?php echo $k == 0 ? 'active': ''; ?>">
+                                <div class="accrodion-title rounded">
+                                    <h5 class="mb-0"><?php echo $item['title']; ?></h5>
+                                </div>
+                                <div class="accrodion-content" style="display: <?php echo $k == 0 ? 'block': 'none'; ?>;">
+                                    <div class="inner">
+                                        <p><?php echo $item['description']; ?></p>
+                                    </div>
+                                </div>
+
+                            </div> 
+                            <?php
+                                $k ++;
+                            }
+                            ?>
+                        </div>
+                        <?php
+                            }
+                        }
+                        ?> 
                     </div>
                 </div>
             </div>

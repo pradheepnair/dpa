@@ -43,18 +43,19 @@
     		//'panel'    => 'dpa_script_block',
             'priority' => 700,
         ));
-    	$wp_customize->add_setting('dpa_script_ga', array(
+    	$wp_customize->add_setting('dpa_script_header', array(
             'default'        => '', 
             'transport'      => 'refresh',
             'type'           => 'option',
 			'capability'     => 'edit_theme_options' 
         ));
-    	$wp_customize->add_control('dpa_script_ga_input', array(
+    	$wp_customize->add_control('dpa_script_header_input', array(
             'label'      => __('Script(inside header):', 'dpa'),
             'section'    => 'dpa_scripts_block',
-            'settings'   => 'dpa_script_ga',
+            'settings'   => 'dpa_script_header',
             'type'      => 'textarea'
         ));
+
     	$wp_customize->add_setting('dpa_script_body', array(
             'default'        => '', 
             'transport'      => 'refresh',
@@ -67,6 +68,19 @@
             'settings'   => 'dpa_script_body',
             'type'      => 'textarea'
         ));
+
+        $wp_customize->add_setting('dpa_script_footer', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+			'capability'     => 'edit_theme_options' 
+        ));
+    	$wp_customize->add_control('dpa_script_footer_input', array(
+            'label'      => __('Script(inside footer):', 'dpa'),
+            'section'    => 'dpa_scripts_block',
+            'settings'   => 'dpa_script_footer',
+            'type'      => 'textarea'
+        ));
     }
     add_action('customize_register', 'customize_script_block'); 
     
@@ -76,7 +90,7 @@
         $wp_customize->add_panel( 'footer_blocks', array(
     		'priority'       => 500,
     		'theme_supports' => '',
-    		'title'          => __( 'Footer', 'dpa' ),
+    		'title'          => __( 'Footer Contents', 'dpa' ),
     		'description'    => __( 'Set editable text for certain content.', 'dpa' ),
     	) ); 
     	

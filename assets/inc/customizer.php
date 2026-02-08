@@ -34,6 +34,30 @@
        );
     }
     add_action( 'init', 'register_dpa_menus' );
+
+    // General block
+    function customize_general_block($wp_customize) { 
+    	$wp_customize->add_section('dpa_general_block', array(
+            'title'    => __('General Settings', 'dpa'),
+            'description' => 'Set general settings here', 
+            'priority' => 600,
+        ));
+    	$wp_customize->add_setting('dpa_general_tripadvisor', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+			'capability'     => 'edit_theme_options' 
+        ));
+    	$wp_customize->add_control('dpa_general_tripadvisor_input', array(
+            'label'      => __('TripAdvisor Script:', 'dpa'),
+            'section'    => 'dpa_general_block',
+            'settings'   => 'dpa_general_tripadvisor',
+            'type'      => 'textarea'
+        ));
+
+    	 
+    }
+    add_action('customize_register', 'customize_general_block'); 
     
     // Script block
     function customize_script_block($wp_customize) { 

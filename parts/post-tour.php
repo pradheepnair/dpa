@@ -81,7 +81,16 @@ $duration = get_field('duration', $post->ID);
                             $count_images = count($images);
                             if ($count_images > 0) {
                         ?>
-                        
+                        <div class="description-images mb-4 overflow-hidden">
+                            <div class="thumbnail-images position-relative">
+                                <div class="slider-store rounded overflow-hidden">
+                                    <?php foreach($images as $image) { ?>
+                                    <div><img src="<?php echo $image['image']; ?>" alt=""></div>
+                                    <?php } ?>
+                                </div>
+                                
+                            </div>
+                        </div>   
                         <?php
                             } 
                         } ?>

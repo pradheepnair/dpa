@@ -25,7 +25,7 @@ if (count($faqs) > 0) {
             <div class="faq-accordian">
                 <div class="row">
                     <div class="col-lg-5 col-md-5 mb-4">
-                        <img src="<?php echo DPA_THEME_URI; ?>/assets/images/generic/faq.jpg" alt="" class="img-responsive" />
+                        <img src="<?php echo DPA_THEME_URI; ?>/assets/images/faq.jpg" alt="" class="img-responsive" />
                     </div>
                     <div class="col-lg-7 col-md-7 mb-8">
                         <div class="accrodion-grp faq-accrodion" data-grp-name="faq-accrodion1">

@@ -59,25 +59,16 @@ $duration = get_field('duration', $post->ID);
                         </div>
                         <?php
                         $summary = get_field('summary', $post->ID);
-                        if($summary) {
-                            $col = 4;
-                            $j = 1;
-                        ?>
-                        <div class="tour-includes mb-4">
-                            <div class="row no-gutters">
-                                <?php 
+                        if($summary) { ?>
+                        <div class="tour-includes mb-4"> 
+                            <?php 
                                 $count_summary = count($summary);
-                                foreach($summary as $item) { 
-                                    if ($count_summary === $j) $col = 8;
-                                    if ($count_summary === $j && $count_summary == 4) $col = 12;
-                                    if ($count_summary === $j && $count_summary == 6) $col = 4;
-                                    ?>
-                                    <div class="col-md-<?php echo $col; ?> include_item" >
+                                foreach($summary as $item) { ?>
+                                <div class="include_item" >
                                     <div class="include_item_key"><?php echo $item['title']; ?></div>
                                     <div class="include_item_val"><?php echo $item['description']; ?></div>
                                 </div>    
-                                <?php } ?>
-                            </div>
+                            <?php } ?>
                         </div>
                         <?php } ?>
                     </div>

@@ -8825,3 +8825,13 @@ input::placeholder,
 .banner .banner-main .banner-content figure {
   padding: 16px 0px;
 }
+.tour-includes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.include_item {
+  width: 365px;
+  max-width: 100%;
+}

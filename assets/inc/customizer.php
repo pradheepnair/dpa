@@ -189,6 +189,7 @@
     		'panel'    => 'footer_blocks',
             'priority' => 70,
         ));
+        
     	$wp_customize->add_setting('dpa_social_fb', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
@@ -198,50 +199,55 @@
             'label'      => __('Facebook handle', 'dpa'),
             'section'    => 'dpa_social_handle',
             'settings'   => 'dpa_social_fb',
+            'type'      => 'text'
         ));
         
         $wp_customize->add_setting('dpa_social_ig', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
-            'type'           => 'theme_mod', 
+            'type'           => 'option', 
         ));
         $wp_customize->add_control('dpa_ig', array(
             'label'      => __('Instagram handle', 'dpa'),
             'section'    => 'dpa_social_handle',
             'settings'   => 'dpa_social_ig',
+            'type'      => 'text'
         ));
         
         $wp_customize->add_setting('dpa_social_tw', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
-            'type'           => 'theme_mod', 
+            'type'           => 'option', 
         ));
         $wp_customize->add_control('dpa_tw', array(
             'label'      => __('Twitter handle', 'dpa'),
             'section'    => 'dpa_social_handle',
             'settings'   => 'dpa_social_tw',
+            'type'      => 'text'
         )); 
         
         $wp_customize->add_setting('dpa_social_yt', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
-            'type'           => 'theme_mod', 
+            'type'           => 'option', 
         ));
         $wp_customize->add_control('dpa_yt', array(
             'label'      => __('YouTube handle', 'dpa'),
             'section'    => 'dpa_social_handle',
             'settings'   => 'dpa_social_yt',
+            'type'      => 'text'
         )); 
         
         $wp_customize->add_setting('dpa_social_li', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
-            'type'           => 'theme_mod', 
+            'type'           => 'option', 
         ));
         $wp_customize->add_control('dpa_li', array(
             'label'      => __('LinkedIn handle', 'dpa'),
             'section'    => 'dpa_social_handle',
             'settings'   => 'dpa_social_li',
+            'type'      => 'text'
         )); 
 
         // Footer Bio block
@@ -253,7 +259,7 @@
     	$wp_customize->add_setting('dpa_footer_bio_text', array(
             'default'        => '',
             'capability'     => 'edit_theme_options',
-            'type'           => 'theme_mod' 
+            'type'           => 'option' 
         ));
     	$wp_customize->add_control('dpa_footer_bio_text_control', array(
             'label'      => __('Footer Bio Text', 'dpa'),

@@ -98,6 +98,11 @@ $duration = get_field('duration', $post->ID);
                         <?php
                             } 
                         } ?>
+
+                        <!-- Description -->
+                        <div class="description mb-2">
+                            <?php echo $post->post_content; ?>
+                        </div> 
                     </div>
                 </div>
             </div>

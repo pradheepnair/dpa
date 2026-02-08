@@ -25,7 +25,7 @@ $page_image_url = get_the_post_thumbnail_url($page->ID, 'full');
                         </div>
                     </div>
                     <div class="col-lg-3 mb-4 pe-lg-4 mt-3">
-                        <div id="TA_selfserveprop893" class="TA_selfserveprop"><ul id="UgLUG3f2m9N" class="TA_links y4LkQUQ8fig"><li id="PLvsX804" class="9XRJdsJ"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g295424-d6902277-Reviews-Dubai_Private_Adventure-Dubai_Emirate_of_Dubai.html"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-11900-2.svg" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=893&amp;locationId=6902277&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+                        <?php echo get_theme_mod('dpa_general_tripadvisor'); ?>
                     </div>
                 </div>
             </div>

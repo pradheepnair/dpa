@@ -141,6 +141,36 @@ $duration = get_field('duration', $post->ID);
                             }
                         }
                         ?> 
+
+                        <!-- Add-ons -->
+                         <?php
+                        $addons_list = get_field('add-ons', $post->ID);
+                        if($addons_list) {
+                            $addons = get_posts(array('post_type' => 'add-on', 'post__in' => $addons_list, 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC'));
+                    
+                            foreach ($addons as $addon) {
+                                $addon_image = get_the_post_thumbnail_url($addon->ID, 'full');
+                                ?>
+                                <div class="trend-full bg-white rounded box-shadow overflow-hidden p-4 mb-4">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-3">
+                                        <div class="trend-item2 rounded">
+                                                <a style="background-image: url(<?php echo $addon_image; ?>);"></a>
+                                                <div class="color-overlay"></div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-9">
+                                            <div class="trend-content position-relative text-md-start text-center tour-addons-info"> 
+                                                <h3 class="mb-1"><?php echo $addon->post_title; ?></h3> 
+                                                <?php echo $addon->post_content; ?>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <?php
+                             }
+                        } 
+                        ?>
                     </div>
                 </div>
             </div>

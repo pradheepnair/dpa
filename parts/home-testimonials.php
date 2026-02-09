@@ -32,11 +32,11 @@ if (count($testimonials) > 0) {
                         <div class="testimonials-slider-item-top">
                             <div class="testimonials-slider-item-user">
                                 <div class="testimonials-slider-item-user_image">
-                                    <a href="<?php echo get_field('location', $testimonial->ID); ?>" target="_blank"><img src="<?php echo $testimonial_image_url; ?>" alt="<?php echo $testimonial->post_title; ?>" /></a>
+                                    <a href="<?php echo get_field('profile_url', $testimonial->ID); ?>" target="_blank"><img src="<?php echo $testimonial_image_url; ?>" alt="<?php echo $testimonial->post_title; ?>" /></a>
                                 </div>
                                 <div class="testimonials-slider-item-user_bio">
                                     <p><b><?php echo $testimonial->post_title; ?></b></p>
-                                    <p><?php echo get_field('profile_url', $testimonial->ID); ?></p>
+                                    <p><?php echo get_field('location', $testimonial->ID); ?></p>
                                 </div>
                             </div>
                             <div class="testimonials-slider-item-logo"><a href="https://www.tripadvisor.com/Attraction_Review-g295424-d6902277-Reviews-Dubai_Private_Adventure-Dubai_Emirate_of_Dubai.html" target="_blank"><img src="<?php echo DPA_THEME_URI; ?>/assets/images/tripadvisor.png" alt="Tripadvisor" /></a></div>

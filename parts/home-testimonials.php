@@ -42,7 +42,7 @@ if (count($testimonials) > 0) {
                             <div class="testimonials-slider-item-logo"><a href="https://www.tripadvisor.com/Attraction_Review-g295424-d6902277-Reviews-Dubai_Private_Adventure-Dubai_Emirate_of_Dubai.html" target="_blank"><img src="<?php echo DPA_THEME_URI; ?>/assets/images/tripadvisor.png" alt="Tripadvisor" /></a></div>
                         </div>
                         <div class="testimonials-slider-item-bottom">
-                        <?php echo $testimonial->post_content; ?>
+                        <p><?php echo get_field('message', $testimonial->ID); ?></p>
                         </div>
                     </div>
                     <?php } ?>

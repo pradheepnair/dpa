@@ -51,6 +51,4 @@ if (count($testimonials) > 0) {
         </div>
     </div>
 </section>
-<?php
-}
-?>
+<?php } ?>

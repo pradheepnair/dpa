@@ -51,7 +51,7 @@ global $post;
 <!-- banner starts -->
     <section class="banner overflow-hidden">
         <div class="banner-main">
-            <div class="banner-image" style="background-image: url('<?php echo DPA_THEME_URI; ?>/assets/images/2023/bg/bg-video.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="banner-image" style="background-image: url('<?php echo DPA_THEME_URI; ?>/assets/images/bg/bg-video.jpg'); background-repeat: no-repeat; background-size: cover;">
                 <div class="video-banner-yt"> 
                     <iframe id="video-placeholder" src="https://www.youtube.com/embed/kNiBYvHCI6M?autoplay=1&mute=1&controls=0&loop=1&playlist=kNiBYvHCI6M&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                 </div>

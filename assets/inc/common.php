@@ -88,103 +88,19 @@
     
     // Load scripts
     function dpa_register_scripts() {
-        wp_enqueue_script(
-			'dpa_script_jquery',
-			DPA_THEME_URI . '/assets/js/jquery-3.5.1.min.js',
-			array(),
-			'3.5.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_bootstrap',
-			DPA_THEME_URI . '/assets/js/bootstrap.min.js',
-			array(),
-			'1.0.0',
-			false
-		); 
-        // wp_enqueue_script(
-		// 	'dpa_script_particles',
-		// 	DPA_THEME_URI . '/assets/js/particles.js',
-		// 	true,
-		// 	''
-		// );  
-        // wp_enqueue_script(
-		// 	'dpa_script_particlerun',
-		// 	DPA_THEME_URI . '/assets/js/particlerun.js',
-		// 	true,
-		// 	'1.0.0'
-		// ); 
-        wp_enqueue_script(
-			'dpa_script_plugin',
-			DPA_THEME_URI . '/assets/js/plugin.js',
-			array(),
-			'1.0.0',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_magnific',
-			DPA_THEME_URI . '/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js',
-			array(),
-			'1.0.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_jquery_ui',
-			DPA_THEME_URI . '/assets/vendors/jquery-ui/jquery-ui.js',
-			array(),
-			'1.0.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_timepicker',
-			DPA_THEME_URI . '/assets/vendors/timepicker/timePicker.js',
-			array(),
-			'1.0.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_main',
-			DPA_THEME_URI . '/assets/js/main.js',
-			array(),
-			'1.0.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_custom_swiper',
-			DPA_THEME_URI . '/assets/js/custom-swiper.js',
-			array(),
-			'1.0.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_custom_accordian',
-			DPA_THEME_URI . '/assets/js/custom-accordian.js',
-			array(),
-			'1.0.1',
-			false
-		); 
-        wp_enqueue_script(
-			'dpa_script_custom_nav',
-			DPA_THEME_URI . '/assets/js/custom-nav.js',
-			array(),
-			'1.0.1',
-			false
-		);  
-        wp_enqueue_script(
-			'dpa_script_custom_script',
-			DPA_THEME_URI . '/assets/js/script.js',
-			array(),
-			'1.0.1',
-			 false
-		);          
-		wp_localize_script(
-		    'dpa_script', 'dpa_ajax',
-            array('ajax_url' => admin_url('admin-ajax.php'), 'template_url' => DPA_THEME_URI), false
-        );  
-        wp_localize_script(
-		    'dpa_script', 'web_url',
-            array('web_url' => DPA_THEME_URI), false
-        );   
+        wp_enqueue_script('dpa_script_jquery', DPA_THEME_URI . '/assets/js/jquery-3.5.1.min.js', NULL, NULL, true); 
+		wp_enqueue_script('dpa_script_bootstrap', DPA_THEME_URI . '/assets/js/bootstrap.min.js', NULL, NULL, true); 
+        wp_enqueue_script('dpa_script_plugin', DPA_THEME_URI . '/assets/js/plugin.js', NULL, NULL, true);  
+        wp_enqueue_script('dpa_script_magnific', DPA_THEME_URI . '/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js', NULL, NULL, true); 
+        wp_enqueue_script('dpa_script_jquery_ui', DPA_THEME_URI . '/assets/vendors/jquery-ui/jquery-ui.js', NULL, NULL, true); 
+        wp_enqueue_script('dpa_script_timepicker', DPA_THEME_URI . '/assets/vendors/timepicker/timePicker.js', NULL, NULL, true); 
+        wp_enqueue_script('dpa_script_main', DPA_THEME_URI . '/assets/js/main.js', NULL, '1.0.1', true); 
+        wp_enqueue_script('dpa_script_custom_swiper', DPA_THEME_URI . '/assets/js/custom-swiper.js', NULL, '1.0.1', true);  
+        wp_enqueue_script('dpa_script_custom_accordian', DPA_THEME_URI . '/assets/js/custom-accordian.js', NULL, '1.0.1', true);  
+        wp_enqueue_script('dpa_script_custom_nav', DPA_THEME_URI . '/assets/js/custom-nav.js', NULL, '1.0.1', true); 
+        wp_enqueue_script('dpa_script_custom_script', DPA_THEME_URI . '/assets/js/script.js', NULL, '1.0.1', true); 
+		wp_localize_script('dpa_script', 'dpa_ajax', array('ajax_url' => admin_url('admin-ajax.php'), 'template_url' => DPA_THEME_URI), true);  
+        wp_localize_script('dpa_script', 'web_url', array('web_url' => DPA_THEME_URI), true);   
     }
     add_action('wp_enqueue_scripts', 'dpa_register_scripts');  
      

@@ -11,6 +11,7 @@ get_header();
 get_template_part('parts/home-banner', 'home'); 
 get_template_part('parts/home-about', 'home'); 
 get_template_part('parts/home-counter', 'home'); 
+get_template_part('parts/home-testimonials', 'home'); 
 get_template_part('parts/home-faqs', 'home');
 get_footer();
 ?>

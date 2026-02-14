@@ -14,5 +14,6 @@ get_template_part('parts/home-counter', 'home');
 get_template_part('parts/home-testimonials', 'home'); 
 get_template_part('parts/home-articles', 'home');
 get_template_part('parts/home-faqs', 'home');
+get_template_part('parts/home-guests', 'home');
 get_footer();
 ?>

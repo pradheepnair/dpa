@@ -11,13 +11,13 @@
  */
 
 global $wp_query; 
-$post = $wp_query->post; 
 $page = get_page_by_path('blogs', OBJECT, 'page'); 
-$blog_image_url = get_the_post_thumbnail_url($page->ID, 'full');
 if(!$page) {
     wp_redirect(home_url()); 
     exit;
 }
+$blog_image_url = get_the_post_thumbnail_url($page->ID, 'full');
+$post = $wp_query->post; 
 $blog_title = $post->post_title;
 $blog_url = get_permalink($post->ID); 
 $blog_story = $post->post_content;  

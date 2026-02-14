@@ -8837,3 +8837,8 @@ input::placeholder,
 .current_page_item a {
   color: #ef9a45 !important;
 }
+.call-banner-inner p,
+.call-banner-inner h2,
+.call-banner-inner h5 {
+  color: #ffffff;
+}

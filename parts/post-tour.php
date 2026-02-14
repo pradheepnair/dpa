@@ -32,7 +32,7 @@ $duration = get_field('duration', $post->ID);
                     <h1 class="mb-3"><?php echo $page_title; ?></h1>
                     <nav aria-label="breadcrumb" class="d-block">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?php echo DPA_THEME_URI; ?>">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo $page_url; ?>"><?php echo $page_title; ?></a></li>
                             <li class="breadcrumb-item active" aria-current="page"><?php echo $tour_title; ?></li>
                         </ul>

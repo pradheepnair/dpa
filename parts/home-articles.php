@@ -21,6 +21,7 @@ if (count($articles) > 0) {
         <div class="container">
             <div class="section-title mb-6 w-75 mx-auto text-center">
                 <!-- <h4 class="mb-1 theme1">Our Blogs</h4> -->
+                 <p>&nbsp;</p>
                 <h2 class="mb-1 theme"> Recent Articles & Posts</h2> 
             </div>
             <div class="recent-articles-inner">

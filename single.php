@@ -16,6 +16,9 @@ get_header();
 if (is_single() && get_post_type() == 'tour') { 
     get_template_part('parts/post-tour', 'post');
 } 
-
+// Article
+if (is_single() && get_post_type() == 'post') { 
+    get_template_part('parts/post-article', 'post');
+} 
 get_footer();
 ?>

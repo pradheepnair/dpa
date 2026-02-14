@@ -13,7 +13,7 @@ $blog_image_url = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
     <!-- BreadCrumb Starts -->  
     <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(<?php echo $blog_image_url; ?>);">
-        <div class="section-shape section-shape1 top-inherit bottom-0" style="background-image: url(<?php echo $DPA_THEME_URI; ?>/assets/images/shapes/shape8.png);"></div>
+        <div class="section-shape section-shape1 top-inherit bottom-0" style="background-image: url(<?php echo DPA_THEME_URI; ?>/assets/images/shapes/shape8.png);"></div>
         <div class="breadcrumb-outer">
             <div class="container">
                 <div class="breadcrumb-content text-center">

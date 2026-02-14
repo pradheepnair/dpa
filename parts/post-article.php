@@ -20,8 +20,7 @@ if(!$page) {
 }
 $blog_title = $post->post_title;
 $blog_url = get_permalink($post->ID); 
-$blog_story = $post->post_content;
-$blog_image_url = get_field('header_image', $post->ID); 
+$blog_story = $post->post_content;  
 ?>
     <!-- BreadCrumb Starts -->  
     <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(<?php echo $blog_image_url; ?>);">

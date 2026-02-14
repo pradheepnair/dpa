@@ -83,8 +83,7 @@ $articles = get_posts($args);
                                                     <?php foreach($articles as $article) { 
                                                         $post_title = $article->post_title;
                                                         $post_description = $article->post_excerpt;
-                                                        $post_image = get_the_post_thumbnail_url($article->ID, 'full');
-                                                        $post_clean_url = $fn->cleanUrl($post_title);
+                                                        $post_image = get_the_post_thumbnail_url($article->ID, 'full'); 
                                                         $post_url = get_permalink($article->ID);
                                                         $post_date = date('d M, Y', strtotime($article->post_date));
                                                     ?>

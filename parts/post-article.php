@@ -66,7 +66,7 @@ $blog_image_url = get_field('header_image', $post->ID);
                             <?php
 $args = array( 
     'post_type' => 'post', 
-    'posts_per_page' => -1,  
+    'posts_per_page' => 3,  
     'orderby' => array('menu_order' => 'ASC'), 
 );  
 $articles = get_posts($args);  

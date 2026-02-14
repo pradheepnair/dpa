@@ -16,14 +16,15 @@ if(!$page) {
     wp_redirect(home_url()); 
     exit;
 }
-$blog_image_url = get_the_post_thumbnail_url($page->ID, 'full');
+$page_image_url = get_the_post_thumbnail_url($page->ID, 'full');
 $post = $wp_query->post; 
 $blog_title = $post->post_title;
 $blog_url = get_permalink($post->ID); 
 $blog_story = $post->post_content;  
+$blog_image_url = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
     <!-- BreadCrumb Starts -->  
-    <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(<?php echo $blog_image_url; ?>);">
+    <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(<?php echo $page_image_url; ?>);">
         <div class="section-shape section-shape1 top-inherit bottom-0" style="background-image: url(<?php echo DPA_THEME_URI; ?>/assets/images/shapes/shape8.png);"></div>
         <div class="breadcrumb-outer">
             <div class="container">
@@ -51,7 +52,7 @@ $blog_story = $post->post_content;
 
                         <div class="about-content mb-3">
                             <div class="about-image rounded mb-3 overflow-hidden">
-                                <img src="<?php echo $blog_image; ?>" alt="<?php echo $blog_title; ?>" class="w-100">
+                                <img src="<?php echo $blog_image_url; ?>" alt="<?php echo $blog_title; ?>" class="w-100">
                             </div>
                             <h2 class="mb-3"><?php echo $blog_title; ?></h2>
                             <div class="blog-story">

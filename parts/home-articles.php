@@ -10,7 +10,7 @@ global $wp_query;
 $args = array( 
     'post_type' => 'post', 
     'posts_per_page' => 3,  
-    'orderby' => array('menu_order' => 'ASC'), 
+    'orderby' => 'rand' //array('menu_order' => 'ASC'), 
 );  
 $articles = get_posts($args); 
 if (count($articles) > 0) {

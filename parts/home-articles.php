@@ -17,7 +17,7 @@ if (count($articles) > 0) {
     $i = 0;
 ?>
     <!-- recent-articles starts -->
-    <section class="trending recent-articles pb-6 pt-0">
+    <section class="trending recent-articles pb-6 pt-6">
         <div class="container">
             <div class="section-title mb-6 w-75 mx-auto text-center">
                 <!-- <h4 class="mb-1 theme1">Our Blogs</h4> -->

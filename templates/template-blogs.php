@@ -47,7 +47,7 @@ if (count($articles) > 0) {
                 <?php
                 foreach ($articles as $article) {
                     $blog_title = $article->post_title;
-                    $blog_description = $article->post_content;
+                    $blog_description = $article->post_excerpt;
                     $blog_image = get_the_post_thumbnail_url($article->ID, 'full');
                     $blog_date = date('d M, Y', strtotime($article->post_date)); //date_format(strtotime($blog['dated']), "d M, Y");
                     $blog_url = get_permalink($article->ID);

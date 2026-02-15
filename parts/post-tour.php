@@ -26,7 +26,7 @@ $duration = get_field('duration', $post->ID);
 $tour_duration = get_field('tour_duration', $post->ID);
 $tour_price = get_field('tour_price', $post->ID);
 $no_of_pax = get_field('no_of_pax', $post->ID);
-$tour_vehicle = get_field('tour_vehicle', $post->ID);
+$tour_vehicle = get_field('tour_vehicles', $post->ID);
 ?>
     <!-- BreadCrumb Starts -->  
     <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(<?php echo $page_image_url; ?>);">

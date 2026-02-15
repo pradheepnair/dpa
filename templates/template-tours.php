@@ -50,7 +50,7 @@ if ($total_tours > 0) {
                         $tour_title = $tour->post_title;
                         $tour_description = $tour->post_excerpt; 
                         $tour_url = get_permalink($tour->ID); 
-                        $tour_hours = get_field('tour_hours', $tour->ID);
+                        $tour_duration = get_field('tour_duration', $tour->ID);
                         $tour_price = get_field('tour_price', $tour->ID);
                         $no_of_pax = get_field('no_of_pax', $tour->ID);
 

@@ -65,7 +65,7 @@ if ($total_tours > 0) {
                             <div class="trend-meta bg-theme white px-3 py-2 rounded">
                                 <div class="entry-author">
                                     <i class="icon-clock"></i>
-                                    <span class="fw-bold"><?php echo $tour_hours; ?></span>
+                                    <span class="fw-bold"><?php echo $tour_duration; ?></span>
                                 </div>
                             </div>
                             <div class="tour-info tour-info-alt border-b pb-2 mb-2">

@@ -44,9 +44,7 @@ if ($total_tours > 0) {
     <section class="trending pt-6 pb-0 bg-lgrey">
         <div class="container"> 
             <div class="row">
-                <?php 
-                    $cols = 4;
-                    if ($total_tours <= 2) $cols = 6;
+                <?php  
                     foreach($tours as $tour) { 
                         $tour_image = get_the_post_thumbnail_url($tour->ID, 'full');
                         $tour_title = $tour->post_title;

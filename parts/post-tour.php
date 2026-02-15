@@ -22,6 +22,11 @@ $page_url = get_permalink($page->ID);
 $tour_title = $post->post_title;
 $page_image_url = get_field('header_image', $post->ID);
 $duration = get_field('duration', $post->ID);
+
+$tour_duration = get_field('tour_duration', $post->ID);
+$tour_price = get_field('tour_price', $post->ID);
+$no_of_pax = get_field('no_of_pax', $post->ID);
+$tour_vehicle = get_field('tour_vehicle', $post->ID);
 ?>
     <!-- BreadCrumb Starts -->  
     <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(<?php echo $page_image_url; ?>);">
@@ -59,8 +64,26 @@ $duration = get_field('duration', $post->ID);
                         </div>
 
                         <!-- Summary -->
+                        <div class="tour-includes mb-4"> 
+                            <div class="include_item" >
+                                <div class="include_item_key">Service</div>
+                                <div class="include_item_val"><?php echo $tour_title; ?></div>
+                            </div> 
+                            <div class="include_item" >
+                                <div class="include_item_key">Duration</div>
+                                <div class="include_item_val"><?php echo $tour_duration; ?></div>
+                            </div>
+                            <div class="include_item" >
+                                <div class="include_item_key">Price</div>
+                                <div class="include_item_val"><?php echo "$tour_price ($no_of_pax)"; ?></div>
+                            </div>
+                            <div class="include_item" >
+                                <div class="include_item_key">Vehicle</div>
+                                <div class="include_item_val"><?php echo $tour_vehicle; ?></div>
+                            </div>
+                        </div>
                         <?php
-                        $summary = get_field('summary', $post->ID);
+                        /*$summary = get_field('summary', $post->ID);
                         if($summary) { ?>
                         <div class="tour-includes mb-4"> 
                             <?php 
@@ -72,7 +95,7 @@ $duration = get_field('duration', $post->ID);
                                 </div>    
                             <?php } ?>
                         </div>
-                        <?php } ?>
+                        <?php }*/ ?>
 
                         <!-- Gallery -->
                         <?php

@@ -20,8 +20,7 @@ if(!$page) {
 $page_title = $page->post_title;
 $page_url = get_permalink($page->ID);
 $tour_title = $post->post_title;
-$page_image_url = get_field('header_image', $post->ID);
-$duration = get_field('duration', $post->ID);
+$page_image_url = get_field('header_image', $post->ID); 
 
 $tour_duration = get_field('tour_duration', $post->ID);
 $tour_price = get_field('tour_price', $post->ID);
@@ -58,7 +57,7 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                             <div class="single-title">
                                 <h2 class="mb-1"><?php echo $tour_title; ?></h2>
                                 <div class="rating-main d-lg-flex align-items-center text-lg-start text-center">
-                                    <p class="mb-0 me-2"><i class="icon-clock"></i> <?php echo $duration; ?></p> 
+                                    <p class="mb-0 me-2"><i class="icon-clock"></i> <?php echo $tour_duration; ?></p> 
                                 </div>
                             </div>
                         </div>

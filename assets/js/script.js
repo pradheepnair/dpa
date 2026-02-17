@@ -117,6 +117,11 @@ var dpaApp = (function () {
             var jsonData = JSON.parse(response);
             if (jsonData.result == "success") {
               container.html(jsonData.html);
+              switch (target) {
+                case "booking-form":
+                  $("#dpa_tour_date").datepicker({ minDate: 0 });
+                  break;
+              }
               $.magnificPopup.open({
                 items: {
                   src: container,

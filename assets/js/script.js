@@ -103,7 +103,7 @@ var dpaApp = (function () {
           data.append("id", me.data("id"));
 
           loader.addClass("active");
-          console.log(dpa_ajax.ajax_url);
+          //   console.log(dpa_ajax.ajax_url);
           $.ajax({
             url: dpa_ajax.ajax_url,
             enctype: "multipart/form-data",
@@ -113,6 +113,17 @@ var dpaApp = (function () {
             data: data,
             async: true,
           }).done(function (response, textStatus, jqXHR) {
+            var jsonData = JSON.parse(response);
+            if (jsonData.result == "success") {
+              container.html(jsonData.html);
+              $.magnificPopup.open({
+                items: {
+                  src: container,
+                  type: "inline",
+                  closeOnBgClick: false,
+                },
+              });
+            }
             loader.removeClass("active");
           });
         }

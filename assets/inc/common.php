@@ -116,7 +116,11 @@
 function form_action() {
     global $wpdb;
     $target = isset($_POST['target']) ? $_POST['target'] : '';
-    $html = '';
+    $out = array("result" => "error", "message" => "You are not authorised! Please contact the administrator.", "html" => ""); 
+    
+    $header = '<div class="d5_form">';
+    $footer = '<div class="d5_message"></div></div>'; 
+    $html = ''; 
     switch ($target) {
         case 'booking-form':
             $id = isset($_POST['id']) ? $_POST['id'] : '';
@@ -124,7 +128,7 @@ function form_action() {
                 $post = get_post($id);
                 $post_title = $post->post_title;
 
-                $html = '
+                $body = '
                 <form method="post">
                     <div class="row">
                         <div class="col-md-12">
@@ -665,11 +669,13 @@ function form_action() {
                         </div>
                     </div>
                 </form>';
+                $html = $header . $body . $footer;
+                $out = array("result" => "success", "message" => "Booking Form", "html" => $html);
             }
             break;
     }
     
-    echo $html;
+    echo json_encode($out);
     die();
 }
 add_action('wp_ajax_nopriv_form_action', 'form_action');

@@ -15,7 +15,6 @@
     
     // Load style
     function dpa_register_style() {
-
         wp_enqueue_style('dpa_bootstrap', DPA_THEME_URI . '/assets/css/bootstrap.min.css', false, '');
         wp_enqueue_style('dpa_Montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap', false, ''); 
         wp_enqueue_style('dpa_font_awesome_4', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', false, '4.7.0'); 
@@ -42,7 +41,7 @@
         wp_enqueue_script('dpa_script_custom_swiper', DPA_THEME_URI . '/assets/js/custom-swiper.js', NULL, '1.0.1', true);  
         wp_enqueue_script('dpa_script_custom_accordian', DPA_THEME_URI . '/assets/js/custom-accordian.js', NULL, '1.0.1', true);  
         wp_enqueue_script('dpa_script_custom_nav', DPA_THEME_URI . '/assets/js/custom-nav.js', NULL, '1.0.1', true); 
-        wp_enqueue_script('dpa_script_custom_script', DPA_THEME_URI . '/assets/js/script.js', NULL, '1.0.1', true); 
+        wp_enqueue_script('dpa_script_custom_script', DPA_THEME_URI . '/assets/js/script.js', NULL, '1.1.0', true); 
 		wp_localize_script('dpa_script', 'dpa_ajax', array('ajax_url' => admin_url('admin-ajax.php'), 'template_url' => DPA_THEME_URI), true);  
         wp_localize_script('dpa_script', 'web_url', array('web_url' => DPA_THEME_URI), true);   
     }

@@ -77,15 +77,16 @@ var dpaApp = (function () {
       // }
 
       $(document).on("click", ".btn_action", function () {
-        let $me = $(this),
-          $err = false,
+        let me = $(this),
+          err = false,
           data = new FormData(),
-          $form = $me.closest("form"),
-          $act = $me.data("action"),
-          $container = $("#popupWin"),
-          $valid = true;
+          form = me.closest("form"),
+          action = me.data("action"),
+          container = $("#popupWin"),
+          loader = $("#smart_loading"),
+          valid = true;
         // console.log($me.data('id'));
-        $valid = _app.validateForm($form);
+        // valid = _app.validateForm($form);
         // ga('send', 'pageview', window.location.pathname);
         // gtag('event', 'click', {
         //   'event_category': 'action_book_now',
@@ -95,8 +96,9 @@ var dpaApp = (function () {
         // window.dataLayer.push(function () {
         //   this.set("book_form_action", window.location.pathname);
         // });
-
-        console.log($valid);
+        loader.addClass("active");
+        console.log(action);
+        /*
         if ($valid) {
           data.append("action", $act);
           data.append("id", $me.data("id"));
@@ -141,7 +143,8 @@ var dpaApp = (function () {
             }
             $me.removeClass("is-loading");
           });
-        }
+          
+        }*/
         // $.magnificPopup.open({ items: { src: '<div class="message">' + $me.data('id') + '</div>', type: 'inline' } });
       });
 

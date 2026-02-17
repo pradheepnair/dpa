@@ -81,7 +81,7 @@ var dpaApp = (function () {
           err = false,
           data = new FormData(),
           form = me.closest("form"),
-          action = me.data("action"),
+          target = me.data("target"),
           container = $("#popupWin"),
           loader = $("#smart_loading"),
           valid = true;
@@ -98,8 +98,10 @@ var dpaApp = (function () {
         //   this.set("book_form_action", window.location.pathname);
         // });
         if (valid) {
-          data.append("action", action);
+          data.append("action", "form_action");
+          data.append("target", target);
           data.append("id", me.data("id"));
+
           loader.addClass("active");
           console.log(dpa_ajax.ajax_url);
           $.ajax({

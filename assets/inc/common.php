@@ -115,9 +115,9 @@
 
 function form_action() {
     global $wpdb;
-    $action = isset($_POST['action']) ? $_POST['action'] : '';
+    $target = isset($_POST['target']) ? $_POST['target'] : '';
     $html = '';
-    switch ($action) {
+    switch ($target) {
         case 'booking-form':
             $id = isset($_POST['id']) ? $_POST['id'] : '';
             if ($id > 0) {

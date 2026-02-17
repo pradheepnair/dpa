@@ -117,6 +117,18 @@
     <div style="display:none">
         <div id="popupWin" class="dpa_popup">Here</div> 
     </div>
+<div id="smart_loading" class="smart-loading__wrap">
+  <div class="smart-loading__body">
+    <p>Content loading ... </p>
+    <p>Please wait for a moment...</p>
+    <div class="smart-loading__box">
+      <div class="smart-loading smart-loading_1"></div>
+      <div class="smart-loading smart-loading_2"></div>
+      <div class="smart-loading smart-loading_3"></div>
+      <div class="smart-loading smart-loading_4"></div>
+    </div>
+  </div>
+</div>
 <?php wp_footer(); ?>
 <?php echo $footer_script; ?>
 </body>

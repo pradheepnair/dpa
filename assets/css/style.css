@@ -8870,3 +8870,121 @@ input::placeholder,
   background-size: auto 16px;
   padding-left: 15px;
 }
+
+/*Smart loader section start*/
+@-webkit-keyframes smart_loading {
+  0% {
+  }
+
+  50% {
+    background-color: #e92631;
+  }
+
+  100% {
+  }
+}
+
+@keyframes smart_loading {
+  0% {
+  }
+
+  50% {
+    background-color: #e92631;
+  }
+
+  100% {
+  }
+}
+
+.smart-loading__box {
+  width: 68px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.smart-loading {
+  background-color: #d8d8d8;
+  float: left;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  -webkit-animation-name: smart_loading;
+  animation-name: smart_loading;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+
+.smart-loading + .smart-loading {
+  margin-left: 12px;
+}
+
+.smart-loading__wrap {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+}
+
+.smart-loading__wrap.active {
+  display: block;
+}
+
+.smart-loading__body {
+  font-size: 1em;
+  font-family: "RTA", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #53565a !important;
+  background-color: #ffffff;
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .smart-loading__body {
+    width: 330px;
+  }
+}
+
+.smart-loading__body p {
+  margin-bottom: 5px;
+  font-size: 1em;
+  font-family: "RTA", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.25;
+  color: #53565a !important;
+}
+
+.smart-loading_1 {
+  -webkit-animation-delay: 0.24s;
+  animation-delay: 0.24s;
+}
+
+.smart-loading_2 {
+  -webkit-animation-delay: 0.48s;
+  animation-delay: 0.48s;
+}
+
+.smart-loading_3 {
+  -webkit-animation-delay: 0.72s;
+  animation-delay: 0.72s;
+}
+
+.smart-loading_4 {
+  -webkit-animation-delay: 0.96s;
+  animation-delay: 0.96s;
+}

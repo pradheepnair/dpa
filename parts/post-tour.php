@@ -183,7 +183,7 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                         if($addons_list) {
                             $addons = get_posts(array('post_type' => 'add-on', 'post__in' => $addons_list, 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC'));
                         ?>
-                        <div class="spacer"></div>
+                        <p>&nbsp;</p>
                         <div class="add-on-packages">
                         <h3>Add-on Packages</h3>
                         <?php 

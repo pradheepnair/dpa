@@ -8842,3 +8842,15 @@ input::placeholder,
 .call-banner-inner h5 {
   color: #ffffff;
 }
+.itinerary-details {
+  clear: both;
+  overflow: hidden;
+}
+.itinerary-details .itinerary-item {
+  padding: 8px 0px;
+}
+.itinerary-details .itinerary-item h2 {
+  color: #ef9a45;
+  font-weight: bold;
+  font-size: 18px;
+}

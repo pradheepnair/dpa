@@ -138,6 +138,18 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                             <h3>Itinerary</h3>
                             <p><?php echo $description; ?></p>               
                         </div>
+                        <div class="itinerary-details">
+                            <?php 
+                            foreach($itinerary as $item) { 
+                            ?>
+                            <div class="itinerary-item">
+                                <h2><?php echo $item['title']; ?></h2>
+                                <?php echo $item['description']; ?>
+                            </div>
+                            <?php
+                            } ?>
+                        </div>
+                        <?php /* ?>
                         <div class="accrodion-grp faq-accrodion mb-4" data-grp-name="faq-accrodion">
                             <?php 
                             $k = 0;
@@ -159,6 +171,7 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                             }
                             ?>
                         </div>
+                        <?php */ ?>
                         <?php
                             }
                         }

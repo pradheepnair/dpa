@@ -113,6 +113,7 @@ var dpaApp = (function () {
             data: data,
             async: true,
           }).done(function (response, textStatus, jqXHR) {
+            console.log(response);
             var jsonData = JSON.parse(response);
             if (jsonData.result == "success") {
               container.html(jsonData.html);

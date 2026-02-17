@@ -85,6 +85,7 @@ var dpaApp = (function () {
           container = $("#popupWin"),
           loader = $("#smart_loading"),
           valid = true;
+        valid = _app.validateForm(form);
         // console.log($me.data('id'));
         // valid = _app.validateForm($form);
         // ga('send', 'pageview', window.location.pathname);
@@ -96,12 +97,26 @@ var dpaApp = (function () {
         // window.dataLayer.push(function () {
         //   this.set("book_form_action", window.location.pathname);
         // });
-        loader.addClass("active");
-        console.log(action);
+        if (valid) {
+          data.append("action", action);
+          data.append("id", me.data("id"));
+          loader.addClass("active");
+          console.log(dpa_ajax.ajax_url);
+          $.ajax({
+            url: dpa_ajax.ajax_url,
+            enctype: "multipart/form-data",
+            processData: false,
+            contentType: false,
+            type: "post",
+            data: data,
+            async: true,
+          }).done(function (response, textStatus, jqXHR) {
+            loader.removeClass("active");
+          });
+        }
         /*
         if ($valid) {
-          data.append("action", $act);
-          data.append("id", $me.data("id"));
+          
           $form.find("fieldset").each(function () {
             let $field = $(this),
               $input = $field.find(".input");

@@ -143,7 +143,7 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                             foreach($itinerary as $item) { 
                             ?>
                             <div class="itinerary-item">
-                                <h2><?php echo $item['title']; ?></h2>
+                                <h4><?php echo $item['title']; ?></h4>
                                 <?php echo $item['description']; ?>
                             </div>
                             <?php
@@ -182,7 +182,10 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                         $addons_list = get_field('add-ons', $post->ID);
                         if($addons_list) {
                             $addons = get_posts(array('post_type' => 'add-on', 'post__in' => $addons_list, 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC'));
-                    
+                        ?>
+                        <div class="add-on-packages">
+                        <h3>Add-on Packages</h3>
+                        <?php 
                             foreach ($addons as $addon) {
                                 $addon_image = get_the_post_thumbnail_url($addon->ID, 'full');
                                 ?>
@@ -204,6 +207,9 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                                 </div>
                                 <?php
                              }
+                        ?>
+                        </div>
+                        <?php
                         } 
                         ?>
 

@@ -8849,7 +8849,7 @@ input::placeholder,
 .itinerary-details .itinerary-item {
   padding: 8px 0px;
 }
-.itinerary-details .itinerary-item h2 {
+.itinerary-details .itinerary-item h4 {
   color: #ef9a45;
   font-weight: bold;
   font-size: 18px;

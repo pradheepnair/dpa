@@ -133,6 +133,7 @@ var dpaApp = (function () {
             loader.removeClass("active");
           });
         }
+          
         /*
         if ($valid) {
           

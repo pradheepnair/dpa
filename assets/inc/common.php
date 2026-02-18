@@ -689,7 +689,10 @@ function form_action() {
                     </div> 
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Thank you! Your request has been sent successfully.</h2>
+                            <h2>Thank you!</h2> 
+                            <p>Your booking request has been sent successfully.<br>One of our tour executive will be in touch with you within next 4 hours.</p>
+                            <p>Alternatively, you can contact us via WhatsApp or call using <a href="tel:+971 581113485">+971 581113485</a>.</p>
+                            <p>Our email address is <a href="mailto:info@dubaiprivateadventure.com">info@dubaiprivateadventure.com</a></p>
                         </div>
                     </div>
                 </form>';

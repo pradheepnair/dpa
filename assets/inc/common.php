@@ -130,6 +130,7 @@ function form_action() {
 
                 $body = '
                 <form method="post">
+                    <input type="hidden" name="id" id="id" value="' . $id . '" />
                     <div class="row">
                         <div class="col-md-12">
                             <h1>Book: ' . $post_title . '</h1>
@@ -665,12 +666,35 @@ function form_action() {
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <fieldset><a data-id="' . $id . '" data-action="book_submit" class="nir-btn white btn_action">Submit</a></fieldset>
+                            <fieldset><a data-id="' . $id . '" data-action="booking-submit" class="nir-btn white btn_action">Submit</a></fieldset>
                         </div>
                     </div>
                 </form>';
                 $html = $header . $body . $footer;
                 $out = array("result" => "success", "message" => "Booking Form", "html" => $html);
+            }
+            break;
+
+        case 'booking-submit':
+            $id = isset($_POST['id']) ? $_POST['id'] : '';
+            if ($id > 0) {
+                $post = get_post($id);
+                $post_title = $post->post_title;
+                $body = '
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Book: ' . $post_title . '</h1>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Please enter your details below</h2>
+                        </div>
+                    </div>
+                </form>';
+                $html = $header . $body . $footer;
+                $out = array("result" => "success", "message" => "Booking Form Submit", "html" => $html);
             }
             break;
     }

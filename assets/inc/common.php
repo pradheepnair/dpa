@@ -689,7 +689,7 @@ function form_action() {
                     </div> 
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Thank you!</h2>
+                            <h2>Thank you! Your request has been sent successfully.</h2>
                         </div>
                     </div>
                 </form>';

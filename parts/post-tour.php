@@ -248,7 +248,7 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                                 <p>&nbsp;</p>
                                 <form class="form-content rounded overflow-hidden bg-theme">
                                     <h4 class="white text-center border-b pb-2">So, what are you waiting for? Book your package now!</h4>
-                                    <a data-id="<?php echo $post->ID; ?>" data-target="booking-form" class="nir-btn w-100 bg-title btn_action">Book Now</a> 
+                                    <a data-id="<?php echo $post->ID; ?>" data-target="booking-form" class="nir-btn w-100 bg-title btn_action btn-big">Book Now</a> 
                                 </form>
                                 <div class="logo-appreciations" style="justify-content: center;">
                                     <a href="https://www.tripadvisor.com/Attraction_Review-g295424-d6902277-Reviews-Dubai_Private_Adventure-Dubai_Emirate_of_Dubai.html" target="_blank"><img src="<?php echo DPA_THEME_URI; ?>/assets/images/trip-advisor.webp" alt=""></a> 

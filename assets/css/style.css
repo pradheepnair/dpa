@@ -9006,3 +9006,11 @@ input::placeholder,
 .about-image-box h4 {
   color: #ef9a45;
 }
+.btn-big {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}

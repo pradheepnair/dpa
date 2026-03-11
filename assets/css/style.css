@@ -8988,3 +8988,13 @@ input::placeholder,
   -webkit-animation-delay: 0.96s;
   animation-delay: 0.96s;
 }
+.about-image-box {
+  color: both;
+}
+.about-image-box h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+.about-image-box h3 {
+  color: #ef9a45;
+}

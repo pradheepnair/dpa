@@ -58,7 +58,7 @@ if ($why_us) {
 ?>
 <!-- about-us starts -->
 <section class="about-us pb-0">
-    <div class="section-shape section-shape1" style="background-image: url(<?php echo HOST_URL; ?>/assets/images/2023/shapes/shape8.png);"></div>
+    <div class="section-shape section-shape1" style="background-image: url(<?php echo DPA_THEME_URI; ?>/assets/images/shapes/shape8.png);"></div>
     <div class="container">
         <div class="section-title mb-6 w-50 mx-auto text-center"> 
             <h2 class="mb-1 theme">Why Choose Us?</h2> 

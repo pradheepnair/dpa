@@ -59,7 +59,11 @@
 							<?php wp_nav_menu( array('theme_location' => 'main-nav', 'menu_class' => 'nav navbar-nav', 'container' => false)); ?> 
                         </div><!-- /.navbar-collapse -->    
                         <div class="register-login d-flex align-items-center"> 
-                            <a href="/tours"  class="nir-btn white">Book Now</a>
+							<?php if (is_page_template('templates/template-tours.php')) { ?>
+                            <a data-id="<?php echo $post->ID; ?>" data-target="booking-form" class="nir-btn white btn_action">Book now</a>
+							<?php } else { ?>
+							<a href="/tours"  class="nir-btn white">Book Now</a>
+							<?php } ?>
                         </div> 
 
                         <div id="slicknav-mobile"></div>

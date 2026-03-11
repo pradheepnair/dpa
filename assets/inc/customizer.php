@@ -112,6 +112,19 @@
             'type'      => 'text'
         ));
 
+    	$wp_customize->add_setting('dpa_general_google_location', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+			'capability'     => 'edit_theme_options' 
+        ));
+    	$wp_customize->add_control('dpa_general_google_location_input', array(
+            'label'      => __('Google Location URL:', 'dpa'),
+            'section'    => 'dpa_general_block',
+            'settings'   => 'dpa_general_google_location',
+            'type'      => 'text'
+        ));
+
         $wp_customize->add_setting('dpa_general_tripadvisor_google', array(
             'default'        => '', 
             'transport'      => 'refresh',

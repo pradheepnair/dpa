@@ -30,3 +30,6 @@ $about_image_url = get_the_post_thumbnail_url($post->ID, 'full');
         <div class="dot-overlay"></div>
     </section>
     <!-- BreadCrumb Ends --> 
+<?php
+get_footer();
+?> 

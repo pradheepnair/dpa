@@ -59,7 +59,7 @@
 							<?php wp_nav_menu( array('theme_location' => 'main-nav', 'menu_class' => 'nav navbar-nav', 'container' => false)); ?> 
                         </div><!-- /.navbar-collapse -->    
                         <div class="register-login d-flex align-items-center"> 
-                            <a href="#"  class="nir-btn white btn_action">Book Now</a>
+                            <a href="/tours"  class="nir-btn white">Book Now</a>
                         </div> 
 
                         <div id="slicknav-mobile"></div>

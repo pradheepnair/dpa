@@ -8825,15 +8825,22 @@ input::placeholder,
   padding: 16px 0px;
 }
 .tour-includes {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   cursor: pointer;
 }
-.include_item {
+@media (max-width: 767px) {
+  .tour-includes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* .include_item {
   width: 365px;
   max-width: 100%;
-}
+} */
 .current_page_item a {
   color: #ef9a45 !important;
 }

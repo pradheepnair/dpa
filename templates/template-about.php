@@ -100,4 +100,5 @@ if ($why_us) {
 <?php 
     }
 }
-?>
+get_footer();
+?> 

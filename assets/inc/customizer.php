@@ -73,6 +73,19 @@
             'type'      => 'textarea'
         ));
 
+        $wp_customize->add_setting('dpa_general_address', array(
+            'default'        => '', 
+            'transport'      => 'refresh',
+            'type'           => 'option',
+			'capability'     => 'edit_theme_options' 
+        ));
+    	$wp_customize->add_control('dpa_general_address_input', array(
+            'label'      => __('Office Address:', 'dpa'),
+            'section'    => 'dpa_general_block',
+            'settings'   => 'dpa_general_address',
+            'type'      => 'textarea'
+        ));
+
     	$wp_customize->add_setting('dpa_general_email', array(
             'default'        => '', 
             'transport'      => 'refresh',

@@ -50,3 +50,54 @@ $about_image_url = get_the_post_thumbnail_url($post->ID, 'full');
     </div>
     <div class="white-overlay"></div>
 </section>
+<?php
+$why_us = get_field('why_choose_us', $post->ID);
+if ($why_us) {
+    $count_why_us = count($why_us);
+    if ($count_why_us > 0) {        
+?>
+<!-- about-us starts -->
+<section class="about-us pb-0">
+    <div class="section-shape section-shape1" style="background-image: url(<?php echo HOST_URL; ?>/assets/images/2023/shapes/shape8.png);"></div>
+    <div class="container">
+        <div class="section-title mb-6 w-50 mx-auto text-center"> 
+            <h2 class="mb-1 theme">Why Choose Us?</h2> 
+        </div>
+
+        <!-- why us starts -->
+        <div class="why-us">
+            <div class="why-us-box">
+                <div class="row">
+            <?php
+                foreach ($why_us as $item) {
+                    $icon = $item['icon'];
+                    $title = $item['title'];
+                    $description = $item['description'];
+                    ?>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 mb-4">
+                        <div class="why-us-item p-5 pt-6 pb-6 border rounded bg-white">
+                            <div class="why-us-content">
+                                <div class="why-us-icon mb-1">
+                                    <i class="<?php echo $icon; ?> theme"></i>
+                                </div>
+                                <h4><?php echo $title; ?></h4>
+                                <p class="mb-2"><?php echo $description; ?></p> 
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
+            ?>
+                         
+                    </div>
+                </div>
+            </div>
+            <!-- why us ends -->
+        </div>
+    </section>
+    <!-- about-us ends -->
+<?php 
+    }
+}
+?>

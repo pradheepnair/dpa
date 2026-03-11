@@ -75,7 +75,7 @@ if ($total_tours > 0) {
                             </div>
                             <div class="entry-meta">
                                 <div class="entry-author d-flex align-items-center justify-content-between">
-                                    <p class="mb-0"><a data-id="#" data-action="book_form" class="nir-btn btn_action">Book now</a></p> 
+                                    <p class="mb-0"><a data-id="<?php echo $tour->ID; ?>" data-target="booking-form" class="nir-btn btn_action">Book now</a></p> 
                                     <p class="mb-0"><a href="<?php echo $tour_url; ?>" class="nir-btn nir-btn-secondary">Know more</a></p> 
                                 </div>
                             </div> 

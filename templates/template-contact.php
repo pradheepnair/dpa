@@ -81,7 +81,7 @@ $contact_image_url = get_the_post_thumbnail_url($post->ID, 'full');
                                     <div class="col-lg-6">
                                         <div class="map rounded overflow-hiddenb rounded mb-md-4">
                                             <div style="width: 100%">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28865.452755637987!2d55.320265!3d25.264476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4280caa5f721%3A0x6e658adc92c83b9b!2sDubai%20Private%20Adventure!5e0!3m2!1sen!2sus!4v1689530523684!5m2!1sen!2sus" width="100%" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                <iframe src="<?php echo get_option('dpa_general_google_location'); ?>" width="100%" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </div>
                                         </div>
                                     </div>

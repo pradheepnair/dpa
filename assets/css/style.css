@@ -8995,6 +8995,7 @@ input::placeholder,
   font-size: 28px;
   line-height: 36px;
 }
-.about-image-box h3 {
+.about-image-box h3,
+.about-image-box h4 {
   color: #ef9a45;
 }

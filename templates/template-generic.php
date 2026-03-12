@@ -30,7 +30,7 @@ $generic_image_url = get_the_post_thumbnail_url($post->ID, 'full');
         <div class="dot-overlay"></div>
     </section>
     <!-- BreadCrumb Ends --> 
-    <!-- about-us starts -->
+    <!-- page starts -->
     <section class="about-us pt-6" style="background-image:url(<?php echo DPA_THEME_URI; ?>/assets/images/bg/background_pattern.png); background-position:bottom right;">
         <div class="container">
             <div class="about-image-box">
@@ -45,5 +45,5 @@ $generic_image_url = get_the_post_thumbnail_url($post->ID, 'full');
         </div>
         <div class="white-overlay"></div>
     </section>
-    <!-- about-us ends --> 
+    <!-- page ends --> 
 <?php get_footer(); ?>

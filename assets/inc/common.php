@@ -25,7 +25,7 @@
         wp_enqueue_style('dpa_timepicker', DPA_THEME_URI . '/assets/vendors/timepicker/timePicker.css', false, '1.0.0');
         wp_enqueue_style('dpa_line_icons', DPA_THEME_URI . '/assets/fonts/line-icons.css', false, '1.0.0'); 
         wp_enqueue_style( 'dpa_css_plugin', DPA_THEME_URI . '/assets/css/plugin.css', false, '1.0.0');
-        wp_enqueue_style('dpa_css_style', DPA_THEME_URI . '/assets/css/style.css', false, '5.4.3');
+        wp_enqueue_style('dpa_css_style', DPA_THEME_URI . '/assets/css/style.css', false, '5.4.4');
     }
     add_action('wp_enqueue_scripts', 'dpa_register_style');
     

@@ -9018,3 +9018,11 @@ input::placeholder,
   width: 100%;
   height: 100%;
 }
+.generic-content-box {
+  clear: both;
+  overflow: hidden;
+}
+.generic-content-box h2 {
+  font-size: 20px;
+  margin-top: 32px;
+}

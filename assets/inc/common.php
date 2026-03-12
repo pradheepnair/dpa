@@ -127,6 +127,10 @@ function form_action() {
             if ($id > 0) {
                 $post = get_post($id);
                 $post_title = $post->post_title;
+                $tour_duration = get_field('tour_duration', $id);
+                $tour_price = get_field('tour_price', $id);
+                $no_of_pax = get_field('no_of_pax', $id);
+                $tour_vehicle = get_field('tour_vehicles', $id);
 
                 $body = '
                 <form method="post">
@@ -134,6 +138,28 @@ function form_action() {
                     <div class="row">
                         <div class="col-md-12">
                             <h1>Book: ' . $post_title . '</h1>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tour-includes mb-4"> 
+                                <div class="include_item">
+                                    <div class="include_item_key">Service</div>
+                                    <div class="include_item_val">' . $post_title . '</div>
+                                </div> 
+                                <div class="include_item">
+                                    <div class="include_item_key">Duration</div>
+                                    <div class="include_item_val">' . $tour_duration . '</div>
+                                </div>
+                                <div class="include_item">
+                                    <div class="include_item_key">Price</div>
+                                    <div class="include_item_val">' . $tour_price . ' (' . $no_of_pax . ')</div>
+                                </div>
+                                <div class="include_item">
+                                    <div class="include_item_key">Vehicle</div>
+                                    <div class="include_item_val">' . $tour_vehicle . '</div>
+                                </div>
+                            </div>
                         </div>
                     </div> 
                     <div class="row">

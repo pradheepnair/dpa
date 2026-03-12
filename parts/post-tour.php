@@ -82,19 +82,19 @@ $tour_vehicle = get_field('tour_vehicles', $post->ID);
                             </div>
                         </div>
                         <?php
-                        /*$summary = get_field('summary', $post->ID);
-                        if($summary) { ?>
+                        $packages = get_field('additional_packages', $post->ID);
+                        if($packages) { ?>
                         <div class="tour-includes mb-4"> 
                             <?php 
-                                $count_summary = count($summary);
-                                foreach($summary as $item) { ?>
+                                $count_packages = count($packages);
+                                foreach($packages as $item) { ?>
                                 <div class="include_item" >
                                     <div class="include_item_key"><?php echo $item['title']; ?></div>
                                     <div class="include_item_val"><?php echo $item['description']; ?></div>
                                 </div>    
                             <?php } ?>
                         </div>
-                        <?php }*/ ?>
+                        <?php } ?>
 
                         <!-- Gallery -->
                         <?php

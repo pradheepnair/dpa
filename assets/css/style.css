@@ -9030,3 +9030,8 @@ input::placeholder,
   font-size: 16px;
   color: #777;
 }
+.trending .trend-item,
+.trending .trend-item1,
+.trending .trend-item2 {
+  height: 100%;
+}

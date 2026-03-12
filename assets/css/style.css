@@ -9026,3 +9026,7 @@ input::placeholder,
   font-size: 20px;
   margin-top: 32px;
 }
+.generic-content-box p {
+  font-size: 16px;
+  color: #777;
+}
